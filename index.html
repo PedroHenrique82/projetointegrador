@@ -2,20 +2,30 @@
 <html lang="pt-br">
     <body>
         <script>
+            var d = document;
             function adicionar(){
-                var ul = document.getElementById("lista");
-                var li = document.createElement("li");
-                var valor = document.getElementById("produto").value;
-                li.appendChild(document.createTextNode(valor));
-                ul.appendChild(li);
+              var $dado = d.getElementById("lista");
+              var $tr = d.createElement("tr");
+              var $td = d.createElement("td");
+              var $valor = d.getElementById("produto").value;
+              $td.appendChild(d.createTextNode($valor));
+              $dado.appendChild($td);
+
             }
         </script>
         <div id="lista">
             <input type="text" id="produto"/>
             <input type="submit" onclick="adicionar()" value="adicionar"/>
-            <ul style="overflow:scroll;width:200px;height:100px" id="produto">
-                
-            </ul>            
+            <table border="1px" width="25%">
+            <thead>
+                <tr>
+                    <td>Tarefa</td><td>Pronto</td>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>               
+            </table>           
         </div>
         <br>
         <input type="reset" value="Apagar"/>
