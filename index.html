@@ -1,0 +1,24 @@
+<doctype! html>
+<html lang="pt-br">
+    <body>
+        <script>
+            function adicionar(){
+                var ul = document.getElementById("lista");
+                var li = document.createElement("li");
+                var valor = document.getElementById("produto").value;
+                li.appendChild(document.createTextNode(valor));
+                ul.appendChild(li);
+            }
+        </script>
+        <div id="lista">
+            <input type="text" id="produto"/>
+            <input type="submit" onclick="adicionar()" value="adicionar"/>
+            <ul style="overflow:scroll;width:200px;height:100px" id="produto">
+                
+            </ul>            
+        </div>
+        <br>
+        <input type="reset" value="Apagar"/>
+        <input type="submit" value="Concluir"/>
+    </body>
+</html>
